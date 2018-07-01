@@ -234,7 +234,7 @@
 
 		$('#msg1').text('Correct Answers: ' + correct).show();
 		$('#msg2').text('Incorrect Answers: ' + wrong).show();
-		$('#msg3').text('Unanswers: ' + unanswered).show();
+		$('#msg3').text('Unanswered: ' + unanswered).show();
 
 		setTimeout(playAgain, 5 * 1000);
 	}
