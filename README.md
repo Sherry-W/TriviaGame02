@@ -7,7 +7,7 @@ In this assignment, we were asked to create create a Trivia game using JavaScrip
 ### My Theme
 
 Trivia Questions on Animals
-![Questions were generated from](https://opentdb.com/api_config.php)
+* [Questions were generated from](https://opentdb.com/api_config.php)
 
 ### How It Works
 
