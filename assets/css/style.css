@@ -1,0 +1,24 @@
+body {
+	text-align: center;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+#timer,
+#questions,
+#msg,
+#play {
+	display: none;
+}
+
+p:hover {
+	border: 2px solid black;
+	background-color: lightpink; 
+	width: 200px;
+	margin: auto;
+	cursor: pointer;;
+}
+
+img {
+	width: 300px;
+}
