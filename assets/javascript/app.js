@@ -112,7 +112,7 @@
 
 		for (var j = 0; j < choice.length; j++) { 
 
-				multChoice = $('<p>').attr({'data-value': questions[quesIndex].correct_answers, 'data-src': questions[quesIndex].image}).html(choice[j]);
+				multChoice = $('<p>').html(choice[j]);
 				// console.log(choice[j]);
 				$('#questions').append(multChoice);
 			}
@@ -131,15 +131,15 @@
 		stop();
 		$('#timer').text("Time Remaining: " + timer + " Seconds");
 
-		if ($(this).text() == $(this).attr('data-value')) {
+		if ($(this).text() == questions[quesIndex].correct_answers) {
 			correct++;
 			$('#questions').html("<h3>Correct!</h3>");
 			
-		}else if ($(this).text() !== $(this).attr('data-value') && $(this).text() !== "") {
+		}else if ($(this).text() !== questions[quesIndex].correct_answers && $(this).text() !== "") {
 			wrong++;
-			$('#questions').html("<h3>Nope!</h3><h4>The Correct Answer was: " + $(this).attr('data-value') + "</h4>");
+			$('#questions').html("<h3>Nope!</h3><h4>The Correct Answer was: " + questions[quesIndex].correct_answers + "</h4>");
 		}
-		$('#questions').append('<img src="' + $(this).attr('data-src') + '" />');
+		$('#questions').append('<img src="' + questions[quesIndex].image + '" />');
 
 		setTimeout(next, 3 * 1000);
 	});
@@ -179,7 +179,7 @@
 		$('#msg2').text('Incorrect Answers: ' + wrong).show();
 		$('#msg3').text('Unanswers: ' + unanswered).show();
 
-	setTimeout(playAgain, 5 * 1000);
+		setTimeout(playAgain, 5 * 1000);
 	}
 
 // play again
